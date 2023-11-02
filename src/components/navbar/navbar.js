@@ -6,8 +6,8 @@ const navbar = () => {
     <div className={styles.nav}>
       <ul className={styles.ul}>
         <li className={styles.li}>O mnie</li>
-        <li className={styles.li}>Aktywność</li>
         <li className={styles.li}>PRO300</li>
+        <li className={styles.li}>Aloes</li>
         <li className={styles.li}>sklep</li>
       </ul>
     </div>
