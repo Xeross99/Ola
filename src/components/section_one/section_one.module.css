@@ -1,0 +1,8 @@
+.container {
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+  background: #123;
+  position: relative;
+  z-index: 10;
+}

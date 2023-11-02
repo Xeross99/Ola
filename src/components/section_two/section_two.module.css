@@ -1,0 +1,12 @@
+.container {
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  background: #723472;
+  position: relative;
+}
+
+.images {
+  height: 300vh;
+}
