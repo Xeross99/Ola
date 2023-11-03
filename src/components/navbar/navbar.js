@@ -1,14 +1,13 @@
 import React from 'react'
-import styles from './navbar.module.css'
 
 const navbar = () => {
   return (
-    <div className={styles.nav}>
-      <ul className={styles.ul}>
-        <li className={styles.li}>O mnie</li>
-        <li className={styles.li}>PRO300</li>
-        <li className={styles.li}>Aloes</li>
-        <li className={styles.li}>sklep</li>
+    <div className="w-fit h-fit fixed top-2 left-1/2 -translate-x-1/2 bg-black/70 rounded-full border border-white text-white font-extralight text-lg backdrop-blur-xl px-5">
+      <ul className='flex flex-row gap-5 p-2'>
+        <li>O mnie</li>
+        <li>PRO300</li>
+        <li>Aloes</li>
+        <li>Sklep</li>
       </ul>
     </div>
   )

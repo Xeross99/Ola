@@ -1,9 +1,8 @@
 import React from 'react'
-import styles from './section_one.module.css'
 
 const section_one = () => {
   return (
-    <div className={styles.container}>
+    <div className='w-screen h-screen bg-blue-200'>
    
     </div>
   )
