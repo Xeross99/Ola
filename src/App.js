@@ -6,7 +6,7 @@ import SectionThree from './components/section_three/section_three.js'
 
 function App() {
   return (
-  <div className="max-h-screen overflow-y-scroll snap-mandatory snap-y scroll-smooth">
+  <div className="scroll-smooth">
     <Navbar/>
 
     <SectionOne />

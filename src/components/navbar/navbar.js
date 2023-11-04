@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { motion } from "framer-motion"
 
-const navbar = () => {
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const genericHamburgerLine = `h-[2px] w-8 my-1 rounded-full bg-gray-50 transition ease transform duration-300`;
+
   return (
-    <div className="w-fit h-fit fixed top-2 left-1/2 -translate-x-1/2 bg-white/70 rounded-full border-2 border-gray-50 text-gray-800 font-medium text-lg backdrop-blur-xl px-5 shadow-md shadow-gray-100/50 z-50">
-      <ul className='flex flex-row gap-16 p-2'>
-        <li className='nav-animation'>O mnie</li>
-        <li className='nav-animation'>PRO300</li>
-        <li className='nav-animation'>Aloes</li>
-        <li className='nav-animation'>Sklep</li>
+    <div className="w-screen h-11 fixed top-0 bg-black/80 text-gray-50 font-light text-lg backdrop-blur-xl px-10 z-50">
+      <ul className='hidden sm:flex flex-row justify-end gap-10 p-2'>
+        <motion.li className='nav-animation'>O mnie</motion.li>
+        <motion.li className='nav-animation'>Zdrowie</motion.li>
+        <motion.li className='nav-animation'>Aktywność</motion.li>
+        <motion.li className='nav-animation'>Sklep</motion.li>
       </ul>
+
+      <button onClick={() => setIsOpen(!isOpen)} className="flex sm:hidden flex-col h-fit w-fit justify-center group absolute right-10 top-2">
+        <div className={`${genericHamburgerLine} ${ isOpen ? "rotate-45 translate-y-[10px] opacity-100 group-hover:opacity-70" : "opacity-100 group-hover:opacity-70"}`} />
+        <div className={`${genericHamburgerLine} ${ isOpen ? "opacity-0" : "opacity-100 group-hover:opacity-70"}`}/>
+        <div className={`${genericHamburgerLine} ${isOpen ? "-rotate-45 -translate-y-[10px] opacity-100 group-hover:opacity-70" : "opacity-100 group-hover:opacity-70"}`}/>
+      </button>
     </div>
-  )
+  );
 }
 
-export default navbar
+export default Navbar;

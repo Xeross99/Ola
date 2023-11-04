@@ -4,6 +4,6 @@
 
 @layer components {
   .nav-animation {
-    @apply hover:text-black active:scale-95 cursor-pointer transition-all duration-500 relative after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-center after:h-[2px] after:bg-black;
+    @apply hover:text-white active:scale-95 cursor-pointer transition-all duration-500 relative after:absolute after:bottom-1 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-center after:h-[1px] after:bg-white;
   }
 }
