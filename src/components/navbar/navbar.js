@@ -6,15 +6,14 @@ const Navbar = () => {
   const genericHamburgerLine = `h-[2px] w-8 my-1 rounded-full bg-gray-50 transition ease transform duration-300`;
 
   return (
-    <div className="w-screen h-11 fixed top-0 bg-black/80 text-gray-50 font-light text-lg z-50 overflow-hidden">
-      <nav className='backdrop-blur-xl w-full h-full'>
-        <ul className='hidden sm:flex flex-row justify-end gap-10 p-2 px-10'>
-          <motion.li className='nav-animation'>O mnie</motion.li>
-          <motion.li className='nav-animation'>Zdrowie</motion.li>
-          <motion.li className='nav-animation'>Aktywność</motion.li>
-          <motion.li className='nav-animation'>Sklep</motion.li>
-        </ul>
-      </nav>
+    <div className="w-screen h-11 fixed top-0 bg-black/80 text-gray-50 font-light text-lg z-50 overflow-hidden backdrop-blur-xl">
+      <ul className='hidden sm:flex flex-row justify-center gap-10 p-2 px-10'>
+        <motion.li className='nav-animation'>O mnie</motion.li>
+        <motion.li className='nav-animation'>Zdrowie</motion.li>
+        <motion.li className='nav-animation'>Aktywność</motion.li>
+        <motion.li className='nav-animation'>Sklep</motion.li>
+      </ul>
+
 
       <button onClick={() => setIsOpen(!isOpen)} className="flex sm:hidden flex-col h-fit w-fit justify-center group absolute right-10 top-2 z-50 cursor-pointer">
         <div className={`${genericHamburgerLine} ${ isOpen ? "rotate-45 translate-y-[10px] opacity-100 group-hover:opacity-70" : "opacity-100 group-hover:opacity-70"}`} />
@@ -22,7 +21,7 @@ const Navbar = () => {
         <div className={`${genericHamburgerLine} ${ isOpen ? "-rotate-45 -translate-y-[10px] opacity-100 group-hover:opacity-70" : "opacity-100 group-hover:opacity-70"}`}/>
       </button>
 
-      <div className={`block sm:hidden z-40 fixed bg-black/80 text-gray-50 font-light text-lg inset-0 transition ease transform duration-300 ${isOpen ? "translate-y-0" : "-translate-y-full blur-3xl "} `}>
+      <div className={`block sm:hidden fixed bg-black/80 text-gray-50 font-light text-lg inset-0 transition ease transform duration-300 z-10 pointer-events-none ${isOpen ? "translate-y-0" : "-translate-y-[105%] blur-3xl "} `}>
         <ul className='fixed text-5xl top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 flex flex-col gap-10 items-center'>
             <motion.li  whileHover={{ scale: 1.2 }} 
                         whileTap={{ scale: 0.8 }}

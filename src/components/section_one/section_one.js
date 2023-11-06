@@ -1,14 +1,10 @@
 import React from 'react'
-import image1 from '../images/img4.jpg'
-import image2 from '../images/img1.jpg'
+import image1 from '../images/Logo zieleń.png'
 
 const section_one = () => {
   return (
-    <div className='w-screen h-screen snap-center'>
-      <div className='flex flex-row max-h-screen w-full overflow-x-scroll snap-mandatory snap-x'>
-        <img src={image1} alt="img1" className=' object-cover snap-center'></img>
-        <img src={image2} alt="img2" className=' object-cover snap-center'></img>
-      </div>
+    <div className='w-screen h-screen relative'>
+      <img src={image1} alt="Logo" className='w-1/2 absolute top-1/2 -translate-y-1/2 right-5'></img>
     </div>
   )
 }
