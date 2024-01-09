@@ -1,11 +1,13 @@
 import React from 'react'
+import { motion } from "framer-motion"
 // Photos
 import img1 from '../images/sport/img1.jpg'
 import img2 from '../images/sport/img2.jpg'
 import img3 from '../images/sport/img3.jpg'
 import img4 from '../images/sport/img4.jpg'
 
-const section_two = () => {
+
+const sectionTwo = () => {
   return (
     <div className="my-32 overflow-hidden sm:mt-40">
     <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
@@ -22,35 +24,35 @@ const section_two = () => {
           </p>
         </div>
         <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
-          <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+          <motion.div initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
             <img
               src={img1}
               alt=""
               className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
             />
-          </div>
+          </motion.div>
           <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
-            <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
+            <motion.div initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
               <img
                 src={img4}
                 alt=""
                 className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
               />
-            </div>
-            <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
               <img
                 src={img3}
                 alt=""
                 className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover object-top"
               />
-            </div>
-            <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
               <img
                 src={img2}
                 alt=""
                 className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -59,4 +61,4 @@ const section_two = () => {
   )
 }
 
-export default section_two
+export default sectionTwo
