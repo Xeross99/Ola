@@ -10,7 +10,7 @@ const Navbar = () => {
       <ul className='hidden sm:flex flex-row justify-center gap-10 p-2 px-10'>
         <motion.li className='nav-animation'>O mnie</motion.li>
         <motion.li className='nav-animation'>Zdrowie</motion.li>
-        <motion.li className='nav-animation'>Aktywność</motion.li>
+        <motion.li className='nav-animation'><a href='#aktywność'>Aktywność</a></motion.li>
         <motion.li className='nav-animation'>Sklep</motion.li>
       </ul>
 
