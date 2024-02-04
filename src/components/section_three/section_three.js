@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 
 const container = {
-  hidden: { opacity: 1, scale: 1.5 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    scale: 1,
     transition: {
+      delay: 0.25,
       duration: 0.7,
       delayChildren: 0.4,
       staggerChildren: 0.2
