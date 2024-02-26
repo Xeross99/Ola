@@ -6,7 +6,7 @@ const Navbar = () => {
   const genericHamburgerLine = `h-[2px] w-8 my-1 rounded-full bg-gray-50 transition ease transform duration-300`;
 
   return (
-    <div className="w-screen h-11 fixed top-0 bg-black/80 text-gray-50 font-light text-lg z-50 overflow-hidden backdrop-blur-xl">
+    <div className="w-screen h-11 fixed top-0 bg-gray-900/80 text-gray-50 font-light text-lg z-50 overflow-hidden backdrop-blur-xl">
       <ul className='hidden sm:flex flex-row justify-center gap-10 p-2 px-10'>
         <motion.li className='nav-animation'>O mnie</motion.li>
         <motion.li className='nav-animation'>Zdrowie</motion.li>
